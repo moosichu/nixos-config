@@ -1,5 +1,5 @@
 {
-  description = "NixOS systems and tools by mitchellh";
+  description = "NixOS systems and tools by tomreadcutting";
 
   inputs = {
     # Pin our primary nixpkgs repository. This is the main nixpkgs repository
@@ -49,7 +49,7 @@
     nixosConfigurations.vm-aarch64 = mkSystem "vm-aarch64" {
       inherit nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
 
       overlays = overlays ++ [(final: prev: {
         # Example of bringing in an unstable package:
@@ -60,32 +60,32 @@
     nixosConfigurations.vm-aarch64-prl = mkSystem "vm-aarch64-prl" rec {
       inherit overlays nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
     };
 
     nixosConfigurations.vm-aarch64-utm = mkSystem "vm-aarch64-utm" rec {
       inherit overlays nixpkgs home-manager;
       system = "aarch64-linux";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
     };
 
     nixosConfigurations.vm-intel = mkSystem "vm-intel" rec {
       inherit overlays nixpkgs home-manager;
       system = "x86_64-linux";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
     };
 
     nixosConfigurations.wsl = mkSystem "wsl" {
       inherit overlays nixpkgs home-manager;
       system = "x86_64-linux";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
       nixos-wsl = inputs.nixos-wsl;
     };
 
     darwinConfigurations.macbook-pro-m1 = mkDarwin "macbook-pro-m1" {
       inherit darwin nixpkgs home-manager overlays;
       system = "aarch64-darwin";
-      user   = "mitchellh";
+      user   = "tomreadcutting";
     };
   };
 }
